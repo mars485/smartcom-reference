@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mars485.github.io/smartcom-reference/sitemap.xml
