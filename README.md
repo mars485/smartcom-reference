@@ -7,9 +7,9 @@ An independently implemented responsive, Russian-language IT services website. *
 ## Included
 
 - Home page, three service pages, team and contacts pages
-- Responsive navigation, services, workflow, FAQ, accessible contact-form demo
+- Consistent responsive navigation across all six pages, services, workflow, FAQ, and a contact-form demo
 - Local SVG favicon, custom 404 page, sitemap and robots.txt
-- GitHub Actions static HTML/link validation
+- GitHub Actions checks for links, metadata, basic accessibility landmarks, sitemap consistency, and JavaScript syntax
 - Plain HTML, CSS and JavaScript: no dependencies or build step
 
 ## Run locally
@@ -24,11 +24,12 @@ python3 -m http.server 8000
 
 ```bash
 python3 scripts/check_site.py
+node --check assets/js/main.js
 ```
 
 ## Contact form
 
-**Demo only.** Form fields are validated locally; no data is transmitted or stored. To use this for real business leads, configure a backend endpoint, spam protection, privacy notice and a real business email address. Never commit API keys or secrets to this public repository.
+**Demo only.** Use test data. The browser validates fields locally; no data is transmitted or stored. The form deliberately retains entered values after validation so users can see what was checked. To accept real inquiries, add an approved backend endpoint, spam protection, privacy notice, and verified business contact details. Never commit API keys or secrets to this public repository.
 
 ## Deployment
 
@@ -36,4 +37,4 @@ GitHub Pages publishes from `main` / repository root. A separate workflow checks
 
 ## Release status
 
-Static demo v1.2 is complete. Production lead handling and business-specific identity require real credentials and contact details.
+The static reference is ready for review. Production lead handling and business identity require verified contact details, privacy text, and an approved backend. The project is independent and is not affiliated with SmartCom.

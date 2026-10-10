@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate HTML and local links
+      - name: Validate pages, metadata, landmarks and links
         run: python3 scripts/check_site.py
+      - name: Check JavaScript syntax
+        run: node --check assets/js/main.js
